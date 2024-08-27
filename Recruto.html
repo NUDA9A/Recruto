@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>
+			function getParam(param) {
+				const urlParam = new URLSearchParams(window.location.search);
+				return urlParam.get(param);
+			}
+			
+			function display() {
+				const name = getParam('name') || 'Name';
+				const mesg = getParam('message') || "Message";
+				document.getElementById('message').textContent = `Hello ${name}! ${mesg}!`;
+			}
+		</script>
+	</head>
+	<body onload="display()">
+		<h1 id="message">ПУПУПУ</h1>
+	</body>
+</html>
